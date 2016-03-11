@@ -1,10 +1,21 @@
 package _enum;
 /**
+ * Case
+ * ============================
  * enum: 無參數
  * enum: 一個參數
  * enum: 二個參數
  * enum: case switch
- *
+ * enum: enum to array
+ * ============================
+ * 關於enum說明
+ * ============================
+ * enum不可繼承其他類別，enum也不可能被繼承.
+ * 可新增method在enum內.
+ * enum只能宣告為獨立類別或類別成員,不可以在函式內.
+ * enum是特殊類別,不可以實體化-不可以直接呼叫 enum的建構子(即不可用 new 產生 enum 物件).
+ * enum的建構子只能用 private 或預設存取修飾子.
+ * ============================
  */
 public class Practice0 {
 
@@ -18,6 +29,8 @@ public class Practice0 {
 		System.out.println(Status3.Fail.getCode() + "," + Status3.Fail.getCodeNum());
 		//使用switch case
 		pracitce.enumSwitchCase();
+		//將enum轉為 array
+		pracitce.enum2Array();
 	}
 	
 	public void enumSwitchCase(){
@@ -30,6 +43,11 @@ public class Practice0 {
 			System.out.println("echo fail");
 			break;
 		}
+	}
+	
+	public void enum2Array() {
+		Status1[] array = Status1.values();
+		System.out.println(array[0]);
 	}
 
 }
@@ -71,3 +89,4 @@ enum Status3 {
 			return codeNum;
 		}
 }
+
