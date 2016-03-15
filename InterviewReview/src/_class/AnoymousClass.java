@@ -42,3 +42,4 @@ interface AnonymousInterface {
 	public void echo();
 }
 
+ 
